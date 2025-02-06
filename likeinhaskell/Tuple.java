@@ -8,7 +8,21 @@ package likeinhaskell;
 //  (possibly) different (arbitrary) types, and have the methods fst()
 //  and snd() to return the respective components.
 //  NOTE: The class should be read-only after initial construction.
-public class Tuple {
-    // public ... fst(){...}
-    // public ... snd(){...}
+public class Tuple<T, U> {
+
+    private final T fstItem;
+    private final U sndItem;
+
+    public Tuple(T fstItem, U sndItem) {
+        this.fstItem = fstItem;
+        this.sndItem = sndItem;
+    }
+
+     public T fst(){
+        return this.fstItem;
+     }
+
+     public U snd(){
+        return this.sndItem;
+     }
 }
